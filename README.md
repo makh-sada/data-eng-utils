@@ -1,8 +1,8 @@
 # data-eng-utils
 Reusable artifacts for data migration
 
-## Install remove-old-blobs Cloud Function
-remove-old-blobs removes blobs that older than days in provided ttl_days parameter
+## Cloud Function remove-old-blobs installation instructions
+Cloud Function remove-old-blobs removes blobs older than days in provided ttl_days parameter
 
 1. Change location to `terraform/remove-old-blobs`  
 2. Create a new or select an existing terraform workspace
@@ -13,5 +13,5 @@ remove-old-blobs removes blobs that older than days in provided ttl_days paramet
 4. Run 
 > `terraform plan -var-file=../env/<workspace>/remove_old_blobs.tfvars -out <workspace>.tfplan`
 5. Verify terraform plan
-6. Run 
-> `terraform apply "<workspace>.tfplan" to create required resource`
+6. Run the following command to create Cloud Function and all required resource
+> `terraform apply "<workspace>.tfplan"`
